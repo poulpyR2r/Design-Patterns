@@ -21,7 +21,7 @@ abstract class Creator {
         // Appelez la méthode d'usine pour créer un objet Product
         const product = this.factoryMethod();
         // utilisation de Product
-        return `Creator: The same creator's code has just worked with ${product.operation()}`;
+        return `Créateur : Le code du même créateur vient de fonctionner avec ${product.operation()}`;
     }
 }
 
@@ -74,7 +74,7 @@ l'interface de base, vous pouvez lui transmettre n'importe quelle sous-classe de
  */
 function clientCode(creator: Creator) {
     // ...
-    console.log('Client: I\'m not aware of the creator\'s class, but it still works.');
+    console.log('Client : Je ne connais pas la classe du créateur, mais ça marche quand même.');
     console.log(creator.someOperation());
     // ...
 }
@@ -82,9 +82,9 @@ function clientCode(creator: Creator) {
 /**
  * L'application choisit le type de créateur en fonction de la configuration ou de l'environnement.
  */
-console.log('App: Launched with the ConcreteCreator1.');
+console.log('App : Lancé avec le ConcreteCreator1.');
 clientCode(new ConcreteCreator1());
 console.log('');
 
-console.log('App: Launched with the ConcreteCreator2.');
+console.log('App : Lancé avec le ConcreteCreator2.');
 clientCode(new ConcreteCreator2());
