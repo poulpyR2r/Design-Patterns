@@ -32,7 +32,7 @@ var Creator = /** @class */ (function () {
         // Appelez la méthode d'usine pour créer un objet Product
         var product = this.factoryMethod();
         // utilisation de Product
-        return "Creator: The same creator's code has just worked with ".concat(product.operation());
+        return "Cr\u00E9ateur : Le code du m\u00EAme cr\u00E9ateur vient de fonctionner avec ".concat(product.operation());
     };
     return Creator;
 }());
@@ -90,15 +90,15 @@ l'interface de base, vous pouvez lui transmettre n'importe quelle sous-classe de
  */
 function clientCode(creator) {
     // ...
-    console.log('Client: I\'m not aware of the creator\'s class, but it still works.');
+    console.log('Client : Je ne connais pas la classe du créateur, mais ça marche quand même.');
     console.log(creator.someOperation());
     // ...
 }
 /**
  * L'application choisit le type de créateur en fonction de la configuration ou de l'environnement.
  */
-console.log('App: Launched with the ConcreteCreator1.');
+console.log('App : Lancé avec le ConcreteCreator1.');
 clientCode(new ConcreteCreator1());
 console.log('');
-console.log('App: Launched with the ConcreteCreator2.');
+console.log('App : Lancé avec le ConcreteCreator2.');
 clientCode(new ConcreteCreator2());
